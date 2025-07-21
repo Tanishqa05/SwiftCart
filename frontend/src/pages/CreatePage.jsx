@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const CreatePage = () => {
-  const [product, setProduct] = useState({
+  const [newProduct, setNewProduct] = useState({
     name: '',
     price: '',
     imageUrl: ''
@@ -18,6 +18,7 @@ const CreatePage = () => {
     setProduct({ name: '', price: '', imageUrl: '' });
   };
 
+
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4">
       <h2 className="text-4xl font-bold mb-10">Create New Product</h2>
@@ -30,7 +31,7 @@ const CreatePage = () => {
           type="text"
           name="name"
           placeholder="Product Name"
-          value={product.name}
+          value={newProduct.name}
           onChange={handleChange}
           className="w-full px-4 py-2 rounded border border-gray-600 bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
@@ -39,7 +40,7 @@ const CreatePage = () => {
           type="text"
           name="price"
           placeholder="Price"
-          value={product.price}
+          value={newProduct.price}
           onChange={handleChange}
           className="w-full px-4 py-2 rounded border border-gray-600 bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
@@ -48,7 +49,7 @@ const CreatePage = () => {
           type="text"
           name="imageUrl"
           placeholder="Image URL"
-          value={product.imageUrl}
+          value={newProduct.imageUrl}
           onChange={handleChange}
           className="w-full px-4 py-2 rounded border border-gray-600 bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />

@@ -2,6 +2,7 @@ import { FaShoppingCart, FaPlus } from 'react-icons/fa';
 import { BsSunFill } from 'react-icons/bs';
 
 const Navbar = () => {
+
   return (
     <nav className="flex justify-between items-center px-6 py-4 bg-gray-900 text-white">
       {/* Left: Logo and Cart */}
