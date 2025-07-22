@@ -1,22 +1,38 @@
 import React, { useState } from 'react';
+import { useProductStore } from '../store/product';
+import toast from 'react-hot-toast';
 
 const CreatePage = () => {
   const [newProduct, setNewProduct] = useState({
     name: '',
     price: '',
-    imageUrl: ''
+    image: ''
   });
-
+  
   const handleChange = (e) => {
-    setProduct({ ...product, [e.target.name]: e.target.value });
+    setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
   };
-
-  const handleSubmit = (e) => {
+  
+  const { createProduct } = useProductStore();
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Product added:', product);
-    // clear form
-    setProduct({ name: '', price: '', imageUrl: '' });
+    const {success} = await createProduct(newProduct);
+
+    if (success) {
+      toast.success('Product created successfully!');
+      console.log('Product added:', newProduct);
+      setNewProduct({ name: '', price: '', image: '' }); // Clear form
+    } else {
+      console.error('Error creating product:', message);
+      toast.error('Failed to create product');
+    }
   };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Product added:', newProduct);
+  //   // clear form
+  //   setNewProduct({ name: '', price: '', image: '' });
+  // };
 
 
   return (
@@ -47,9 +63,9 @@ const CreatePage = () => {
 
         <input
           type="text"
-          name="imageUrl"
+          name="image"
           placeholder="Image URL"
-          value={newProduct.imageUrl}
+          value={newProduct.image}
           onChange={handleChange}
           className="w-full px-4 py-2 rounded border border-gray-600 bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
