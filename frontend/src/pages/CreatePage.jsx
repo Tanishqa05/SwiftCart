@@ -41,7 +41,7 @@ const CreatePage = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md space-y-4"
+        className="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md space-y-4 mb-30 "
       >
         <input
           type="text"
