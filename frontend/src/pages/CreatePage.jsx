@@ -27,13 +27,6 @@ const CreatePage = () => {
       toast.error('Failed to create product');
     }
   };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log('Product added:', newProduct);
-  //   // clear form
-  //   setNewProduct({ name: '', price: '', image: '' });
-  // };
-
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4">
