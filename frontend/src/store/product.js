@@ -43,5 +43,25 @@ try {
       const data = await res.json();
       set({ products: data.data });
 
-    }
+    },
+
+    deleteProduct: async (pid) => {
+        console.log('Deleting product with ID:', pid); // Debug log
+
+      const res = await fetch(`/api/products/${pid}`, {
+        method: 'DELETE',
+      });
+
+      const data = await res.json();
+
+      if (!data.success) {
+        console.error('Error deleting product:', data.message);
+        return { success: false, message: data.message };
+      }
+
+      set((state) => ({
+        products: state.products.filter((product) => product._id !== pid),
+      }));
+      return { success: true, message: 'Product deleted successfully' };
+    },
 }));
