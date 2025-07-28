@@ -21,9 +21,9 @@ const Navbar = () => {
     <FaPlus />
   </button>
 </Link>
-        <button className="bg-gray-800 p-2 rounded">
+        {/* <button className="bg-gray-800 p-2 rounded">
           <BsSunFill />
-        </button>
+        </button> */}
       </div>
     </nav>
   );
