@@ -1,5 +1,7 @@
 **SWFT CART:**
 
 **Home Page:**
-<img width="1853" height="865" alt="image" src="https://github.com/user-attachments/assets/98ff2f3b-09c0-4e85-96e1-e86d49ce5a74" />
+<img width="1893" height="866" alt="image" src="https://github.com/user-attachments/assets/773e065d-c633-4927-a22f-24ecc267e6e3" />
 
+**Create Product Page**
+<img width="1896" height="842" alt="image" src="https://github.com/user-attachments/assets/38a6546f-be3b-4a24-82dd-58039966a461" />
