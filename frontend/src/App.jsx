@@ -12,15 +12,7 @@ const Demo = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreatePage />} />
-        {/* <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />*/}
+        
       </Routes> 
     </div>
   );

@@ -59,13 +59,14 @@ const ProductCard = ({ product }) => {
         </div>
         <div className="space-x-2 mt-2">
           <button
-            className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded"
+            className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded cursor-pointer"
             onClick={() => setIsEditing(true)}
           >
             <FaEdit size={18} />
           </button>
           <button
-            className="bg-red-500 hover:bg-red-600 text-white p-2 rounded"
+            className="bg-red-500 hover:bg-red-600 text-white p-2 rounded cursor-pointer
+            "
             onClick={() => handleDeleteProduct(product._id)}
           >
             <FaTrash size={18} />
